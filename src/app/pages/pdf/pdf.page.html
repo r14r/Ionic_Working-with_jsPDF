@@ -1,0 +1,22 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>List of Countries</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div>
+		<input type="button" value="Download as PDF" (click)="downloadPDF()" />
+	</div>
+
+	<h3>List of Countries</h3>
+	<table id="printcontent">
+		<tbody>
+			<tr *ngFor="let item of countries | async">
+				<td>{{ item.name }}</td>
+				<td>{{ item.capital }}</td>
+				<td>{{ item.region }}</td>
+			</tr>
+		</tbody>
+	</table>
+</ion-content>
